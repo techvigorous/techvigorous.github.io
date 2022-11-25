@@ -1,1 +1,14 @@
-theme: jekyll-theme-minimal
+title: Tech Vigorous
+email: admin@techvigorous.com
+description: >-
+  Tech Vigorous is a technical blog made for serving developers by providing a solution for new and day to day used technologies. Our purpose is to help developers learn and understand new technology by providing written blog and video tutorials.
+baseurl: ""
+domain: www.techvigorous.com
+url: "https://www.techvigorous.com"
+twitter_username: dkansh
+github_username:  dkansh
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
