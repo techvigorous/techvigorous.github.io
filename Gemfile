@@ -1,8 +1,14 @@
 source "https://rubygems.org"
 gem "minima", "~> 2.5"
-gem "github-pages", "227", group: :jekyll_plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "github-pages"
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-archives'
+  gem 'kramdown'
+  gem 'rouge'
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
@@ -12,3 +18,5 @@ end
 
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+gem "webrick", "~> 1.7"
