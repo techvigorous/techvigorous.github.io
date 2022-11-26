@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Welcome to Tech Vigorous"
+author: dk
+categories: [ Tech Vigorous, tutorial ]
+image: assets/images/log.png
+featured: true
+---
+Welcome to Tech Vigorous!

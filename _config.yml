@@ -1,14 +1,64 @@
-title: Tech Vigorous
-email: admin@techvigorous.com
+name: "Tech Vigorous"
+title: "Tech Vigorous"
+email: "admin@techvigorous.com"
+logo: "assets/images/logo.png"
+favicon: "assets/images/logo.png"
 description: >-
   Tech Vigorous is a technical blog made for serving developers by providing a solution for new and day to day used technologies. Our purpose is to help developers learn and understand new technology by providing written blog and video tutorials.
 baseurl: ""
-domain: www.techvigorous.com
+domain: "www.techvigorous.com"
 url: "https://www.techvigorous.com"
 twitter_username: dkansh
-github_username:  dkansh
+github_username: dkansh
+google_analytics: ""
+disqus: "techvigorous"
+mailchimp-list: ""
+include: ["_pages"]
+permalink: /:title/
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# Authors
+authors:
+  dk:
+    name: Deepak Kumar
+    display_name: Deepak
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: tech.deepak5@gmail.com
+    web: https://www.techvigorous.com
+    twitter: https://twitter.com/dkansh
+    description: "A passionate developer who loves to code. Author of Tech Vigorous, a daily used tech blogging website."
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: "/category/:name/"
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, CNAME]
