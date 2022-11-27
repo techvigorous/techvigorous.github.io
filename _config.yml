@@ -3,18 +3,26 @@ title: "Tech Vigorous"
 email: "admin@techvigorous.com"
 logo: "assets/images/logo.png"
 favicon: "assets/images/logo.png"
+tagline: >- 
+  A best tech blogging website. A blog dedicated to tech. It's mainly focused on java, spring, 
+  hibernate, JSP, and other backend technologies.
 description: >-
-  Tech Vigorous is a technical blog made for serving developers by providing a solution for new and day to day used technologies. Our purpose is to help developers learn and understand new technology by providing written blog and video tutorials.
+  Tech Vigorous is a technical blog made for serving developers by providing a solution for new and 
+  day-to-day used technologies. Our purpose is to help developers learn and understand new technology 
+  by providing written blogs and video tutorials. A best tech blogging website.
 baseurl: ""
 domain: "www.techvigorous.com"
 url: "https://www.techvigorous.com"
-twitter_username: dkansh
 github_username: dkansh
 google_analytics: ""
 disqus: "techvigorous"
 mailchimp-list: ""
 include: ["_pages"]
 permalink: /:title/
+twitter:
+  username: dkansh
+  card: summary
+google_site_verification:
 
 # Build settings
 # theme: minima

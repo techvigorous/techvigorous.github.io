@@ -6,4 +6,5 @@ categories: [ Tech Vigorous, tutorial ]
 image: assets/images/log.png
 featured: true
 ---
+
 Welcome to Tech Vigorous!
