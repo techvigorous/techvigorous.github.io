@@ -21,8 +21,13 @@ include: ["_pages"]
 permalink: /:title/
 twitter:
   username: dkansh
-  card: summary
+  card: summary_large_image
 google_site_verification:
+social:
+  name: Tech Vigorous
+  links:
+    - https://www.youtube.com/TechVigorous
+    - https://github.com/dkansh
 
 # Build settings
 # theme: minima
