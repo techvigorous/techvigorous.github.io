@@ -1,24 +1,35 @@
-name: "Tech Vigorous"
-title: "Tech Vigorous"
-email: "admin@techvigorous.com"
-logo: "assets/images/logo.png"
-favicon: "assets/images/logo.png"
-tagline: >- 
+name: Tech Vigorous
+title: Tech Vigorous
+email: admin@techvigorous.com
+logo: assets/images/logo.png
+favicon: 'favicon.png'
+tagline: >-
   A best tech blogging website. A blog dedicated to tech. It's mainly focused on java, spring, 
   hibernate, JSP, and other backend technologies.
 description: >-
   Tech Vigorous is a technical blog made for serving developers by providing a solution for new and 
   day-to-day used technologies. Our purpose is to help developers learn and understand new technology 
   by providing written blogs and video tutorials. A best tech blogging website.
-baseurl: ""
-domain: "www.techvigorous.com"
-url: "https://www.techvigorous.com"
+long_description: >-
+  Tech Vigorous is a technical blog made for serving developers by providing a solution for new and 
+  day-to-day used technologies. Our purpose is to help developers learn and understand new technology 
+  by providing written blogs and video tutorials. A best tech blogging website.
+meta_description: >-
+  Tech Vigorous is a technical blog made for serving developers by providing a solution for new and 
+  day-to-day used technologies. Our purpose is to help developers learn and understand new technology 
+  by providing written blogs and video tutorials. A best tech blogging website.
+baseurl: ''
+domain: www.techvigorous.com
+url: https://www.techvigorous.com
+production_url: https://www.techvigorous.com
 github_username: dkansh
-google_analytics: ""
-disqus: "techvigorous"
-mailchimp-list: ""
-include: ["_pages"]
+google_analytics: ''
+disqus: techvigorous
+mailchimp-list: ''
 permalink: /:title/
+author:
+  name: Deepak Kumar
+  twitter: dkansh
 twitter:
   username: dkansh
   card: summary_large_image
@@ -28,6 +39,11 @@ social:
   links:
     - https://www.youtube.com/TechVigorous
     - https://github.com/dkansh
+
+include: 
+  - _pages
+  - robots.txt
+  - CNAME
 
 # Build settings
 # theme: minima
@@ -74,4 +90,11 @@ kramdown:
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, CNAME]
+sass:
+  style: compressed
+
+exclude: 
+  - LICENSE.txt
+  - README.md
+  - Gemfile
+  - Gemfile.lock
