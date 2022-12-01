@@ -6,6 +6,8 @@ category: [java]
 author: dk
 tags: [java, i18n, internationalization, GoogleCloud]
 summary: "Java internationalization (i18n): Translate your Java App/Website in multiple languages"
+description: >-
+    Internationalization has become an invaluable method for capturing the attention of Java app users, making them feel right at home when using one. In this article, let’s look into how we can perform translations in our apps or websites and how to make sure our applications support multiple languages using Java internationalization.
 beforeToc: >-
     <p>Internationalization has become an invaluable method for capturing the attention of Java app users, making them feel right at home when using one. In this article, let’s look into how we can perform translations in our apps or websites and how to make sure our applications support multiple languages using Java internationalization.</p>
 
