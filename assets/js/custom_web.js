@@ -131,3 +131,8 @@ if (raf)
     window.setTimeout(loadDeferredStyles, 0);
   });
 else window.addEventListener("load", loadDeferredStyles);
+
+//Open external links in new tab
+$(document.links).filter(function() {
+  return this.hostname != window.location.hostname;
+}).attr('target', '_blank');
