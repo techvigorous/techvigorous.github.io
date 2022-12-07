@@ -3,7 +3,7 @@ layout: post
 title: "Java internationalization (i18n): Translate your Java App/Website in multiple languages"
 date: 2022-11-26 13:24
 category: [java]
-author: dk
+author: dkansh
 tags: [java, i18n, internationalization, GoogleCloud]
 summary: "Java internationalization (i18n): Translate your Java App/Website in multiple languages"
 description: >-
@@ -24,6 +24,7 @@ toc: true
 ---
 
 ## Internationalization in Java
+
 So, you have an exciting idea for a Java app/website or maybe you use a seasoned Java application in your workplace. But what if your Java application plans to support multiple languages? It needs to operate swiftly, not just in the common English language, but also in a plethora of other languages.
 
 That’s where Java internationalization comes in.
@@ -32,9 +33,9 @@ That’s where Java internationalization comes in.
 
 Primarily we talk about three concepts when it comes to localization in Java. For localization purposes we will be needing:
 
--   [Locale](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html) class objects representing the specific geographical, political, and cultural regions we plan to support.
--   Resources holding locale-specific data in the form of **classes or properties files**.
--   [ResourceBundle](https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html) class objects fetching data for the relevant locales from the respective resources.
+- [Locale](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html) class objects representing the specific geographical, political, and cultural regions we plan to support.
+- Resources holding locale-specific data in the form of **classes or properties files**.
+- [ResourceBundle](https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html) class objects fetching data for the relevant locales from the respective resources.
 
 Note that these Java classes are already built into the `java.util` package.
 
@@ -42,15 +43,15 @@ Note that these Java classes are already built into the `java.util` package.
 
 So, when adding language resources, it is essential to follow these rules:
 
--   All resource files must reside in the same package.
--   All resource files must share a common base name. Please remember this term as we’ll be using it later on in this tutorial. Note that your base name can be whatever you like.
--   The default resource should simply have the base name:
+- All resource files must reside in the same package.
+- All resource files must share a common base name. Please remember this term as we’ll be using it later on in this tutorial. Note that your base name can be whatever you like.
+- The default resource should simply have the base name:
     > **bundle.properties** or **Bundle.java**
--   Additional properties files must be named following this pattern: `base name _ language suffix`
+- Additional properties files must be named following this pattern: `base name _ language suffix`
     > **bundle_fr.properties** or **Bundle_fr.java**
--   Let’s assume that at least one resource file with a language suffix already exists. However, for a particular language, you might like to narrow down the target locale to specific countries as well. In this case, you can add more resource files with additional country suffixes. For example: `base name _ language suffix  _ country suffix`
+- Let’s assume that at least one resource file with a language suffix already exists. However, for a particular language, you might like to narrow down the target locale to specific countries as well. In this case, you can add more resource files with additional country suffixes. For example `base name _ language suffix _ country suffix`
     > **bundle_en_US.properties** or **Bundle_en_US.java**
--   Likewise, following the same logic, you may narrow it down to resource files with an additional variant suffix as well. For instance: `base name _ language suffix _ country suffix _ variant suffix`
+- Likewise, following the same logic, you may narrow it down to resource files with an additional variant suffix as well. For instance: `base name _ language suffix _ country suffix _ variant suffix`
     > **bundle_th_TH_TH.properties** or **Bundle_th_TH_TH.java**
 
 ### Put Them to Use
@@ -186,8 +187,8 @@ How about we create a simple GUI app to get a visual idea of how locale switchin
 
 Prerequisites
 
--   NetBeans IDE
--   Maven
+- NetBeans IDE
+- Maven
 
 I will be using NetBeans IDE 11.3 for Java GUI development purposes.
 
@@ -196,21 +197,21 @@ Create a new Maven project named `java-i18n-gui`. Create a `gui` package in the 
 Add GUI Components
 Let’s add some GUI components as follows:
 
--   First, add two `JLabel` components named `jLabelHello` and `jLabelWelcome`.
--   Next, add two `JButton` components named `jButtonOk` and `jButtonCancel`.
--   Finally, add another `JButton` named `jButtonSwitchLang` with a text value of `Switch`.
+- First, add two `JLabel` components named `jLabelHello` and `jLabelWelcome`.
+- Next, add two `JButton` components named `jButtonOk` and `jButtonCancel`.
+- Finally, add another `JButton` named `jButtonSwitchLang` with a text value of `Switch`.
 
 **Add Language Resources**
 
 Now we need to create a resource bundle containing a few language resources and synchronize it with our `SwitchLang JFrame` form. Follow these steps to achieve this:
 
-1.  First off [following Maven conventions](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html), click on the `Files` tab in Netbeans and create a new `resources` folder in the `src/main/` directory of the project. This `src/main/resources` path will automatically be marked as a `resource` directory the next time we build the project using Maven.
-2.  Create a new `bundle.properties` file within `resources`. This will act as the default resource file of our resource bundle.
-3.  Open the `SwitchLang` form from the `Projects` window and click on the `Design` tab in the `Editor`.
-4.  In the Navigator section, in the lower-left corner, click on the root node in the upper corner. This should be mentioned as `Form SwitchLang` in our case.
-5.  Next, in the `Properties` window on the right, look for an option called `Properties Bundle`. For its value browse `src/main/resources` and select the default resource file `bundle.properties` we created a little while ago.
-6.  In the same window, mark the `Automatic Internationalization` option as checked.
-7.  Open up the bundle.properties file again and replace its content as follows:
+1. First off [following Maven conventions](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html), click on the `Files` tab in Netbeans and create a new `resources` folder in the `src/main/` directory of the project. This `src/main/resources` path will automatically be marked as a `resource` directory the next time we build the project using Maven.
+2. Create a new `bundle.properties` file within `resources`. This will act as the default resource file of our resource bundle.
+3. Open the `SwitchLang` form from the `Projects` window and click on the `Design` tab in the `Editor`.
+4. In the Navigator section, in the lower-left corner, click on the root node in the upper corner. This should be mentioned as `Form SwitchLang` in our case.
+5. Next, in the `Properties` window on the right, look for an option called `Properties Bundle`. For its value browse `src/main/resources` and select the default resource file `bundle.properties` we created a little while ago.
+6. In the same window, mark the `Automatic Internationalization` option as checked.
+7. Open up the bundle.properties file again and replace its content as follows:
 
 ```properties
 SwitchLang.jLabelHello.text=Hello
@@ -222,7 +223,7 @@ SwitchLang.jButtonSwitchLang.text=Switch
 
 Note that we simply set resource keys representing names of the Swing elements we created earlier and put their corresponding resource values on an `en-US` locale.
 
-8.  Finally, create a new `bundle_it_IT.properties` file within resources and put these lines as its content:
+8. Finally, create a new `bundle_it_IT.properties` file within resources and put these lines as its content:
 
 ```properties
 SwitchLang.jLabelHello.text=Ciao
@@ -273,9 +274,9 @@ Handling the proper pluralization of text can become quite a necessity when deal
 
 For instance, let’s assume we need to handle text representing some apples based on a provided quantity. So for the English language, it would take this form:
 
--   0 apples
--   1 apple
--   2 apples
+- 0 apples
+- 1 apple
+- 2 apples
 
 We can code a Java method to handle this, like so:
 
@@ -309,9 +310,9 @@ The ChoiceFormat class accepts two parameters.
 
 The first parameter holds an array of primitive doubles marking the starting points of a set of intervals. For instance, {0, 1, 2} in our example represents three intervals in ascending order:
 
--   The first interval ranges from 0 to 1 including double value 0 and excluding double value 1.
--   Similarly, the second interval ranges from 1 to 2 including 1 and excluding 2.
--   And finally, the third interval ranges from 2 to upwards including 2.
+- The first interval ranges from 0 to 1 including double value 0 and excluding double value 1.
+- Similarly, the second interval ranges from 1 to 2 including 1 and excluding 2.
+- And finally, the third interval ranges from 2 to upwards including 2.
 
 The second parameter holds a String array with values to be used according to each of those intervals. Therefore in our case, it should consecutively hold `apples`, `apple`, `apples`.
 
@@ -410,8 +411,8 @@ public class Translator {
 }
 ```
 
-1.  The `TranslateOptions.getDefaultInstance` method forces the Google Cloud Translation Java client library to retrieve credentials through the `GOOGLE_APPLICATION_CREDENTIALS` environment variable we set when setting up credentials for Cloud Translation API locally.
-2.  Note that providing the source language here is optional since Cloud Translation API can automatically detect languages. Hence, the `TranslateOption.sourceLanguage("en")` parameter is optional; but just to be on the safe side, it is best to manually provide the source language to avoid misinterpretations.
+1. The `TranslateOptions.getDefaultInstance` method forces the Google Cloud Translation Java client library to retrieve credentials through the `GOOGLE_APPLICATION_CREDENTIALS` environment variable we set when setting up credentials for Cloud Translation API locally.
+2. Note that providing the source language here is optional since Cloud Translation API can automatically detect languages. Hence, the `TranslateOption.sourceLanguage("en")` parameter is optional; but just to be on the safe side, it is best to manually provide the source language to avoid misinterpretations.
 
 Consequently, running this program should print out an Italian translation of the `textToTranslate` on the console.
 

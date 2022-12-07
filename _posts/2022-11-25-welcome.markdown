@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Tech Vigorous"
-author: dk
+author: dkansh
 categories: [ Tech Vigorous, tutorial ]
 image: assets/images/log.png
 featured: true
