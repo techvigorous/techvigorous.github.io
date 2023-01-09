@@ -9,9 +9,9 @@ summary: Internationalization (i18n) and Localization (L10n) in a Spring standal
 description: >-
     This blog takes you through all the steps you'll ever need to get started with implementing internationalization in any spring application! Internationalization is a process of preparing an application to support various linguistic, regional, cultural or political-specific data. It is an essential aspect of any modern multi-language application.
 beforeToc: >-
-    <p>A the previous blog we looked into the <a href="/java-internationalization-the-basics">basics of Java i18n</a>. In this blog, let’s take a step into the framework realm and see how the Spring framework handles internationalization i18n and Localization (L10n).</p>
+    <p>In the previous blog we looked into the <a href="/java-internationalization-the-basics">basics of Java i18n</a>. In this blog, let’s take a step into the framework realm and see how the Spring framework handles internationalization i18n and Localization (L10n).</p>
 
-    <p>For Any web application with users all around the world, internationalization (i18n) or localization (L10n) is very important for better user interaction. Most of the web application frameworks provide easy ways to localize the application based on user locale settings. Spring also follows the pattern and provides extensive support for internationalization (i18n) through the use of Spring Resource Bundles for different locales.a</p>
+    <p>For Any web application with users all around the world, internationalization (i18n) or localization (L10n) is very important for better user interaction. Most of the web application frameworks provide easy ways to localize the application based on user locale settings. Spring also follows the pattern and provides extensive support for internationalization (i18n) through the use of Spring Resource Bundles for different locales.</p>
 toc: true
 ---
 
